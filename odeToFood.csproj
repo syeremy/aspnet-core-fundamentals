@@ -2,14 +2,36 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>OdeToFood</AssemblyName>
+    <RootNamespace>OdeToFood</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="Data\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Pages\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Greeter\" />
+    <Folder Include="HttpsConfig\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Https" Version="2.0.1" />
   </ItemGroup>
 
+    <ItemGroup>
+        <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Pages\_Layout.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Update="Pages\Greeting.cshtml.cs">
+        <DependentUpon>Greeting.cshtml</DependentUpon>
+      </Compile>
+    </ItemGroup>
 </Project>

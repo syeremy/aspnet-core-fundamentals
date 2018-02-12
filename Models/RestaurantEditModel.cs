@@ -3,16 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OdeToFood.Models
 {
-    public class Restaurant
+    public class RestaurantEditModel
     {
-        public int Id
-        {
-            get;
-            set;
-        }
-
-        [Display(Name="Restaurant Name")]
-        //[DataType(DataType.Password)]
         [Required, MaxLength(80)]
         public string Name
         {
@@ -24,6 +16,10 @@ namespace OdeToFood.Models
         {
             get;
             set;
+        }
+
+        public RestaurantEditModel()
+        {
         }
     }
 }
