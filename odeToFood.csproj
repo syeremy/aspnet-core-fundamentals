@@ -15,6 +15,7 @@
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="Views\Shared\Components\Greeter\" />
     <Folder Include="HttpsConfig\" />
+    <Folder Include="Middleware\" />
   </ItemGroup>
 
   <ItemGroup>
